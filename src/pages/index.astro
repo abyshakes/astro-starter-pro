@@ -7,57 +7,56 @@ import devImg from "../assets/images/dev_balanced.png";
 import openSourceImg from "../assets/images/open-source.png";
 import Content2 from "../components/widgets/Content2.astro";
 const metadata = {
-  title: `${siteConfig.name} — The next step for your project`,
+  title: `${siteConfig.name} — Full-Stack Web Consultant`,
   description:
-    "A modern and professional template for your web projects with Astro and Tailwind CSS. Boost your development with a solid foundation.",
+    "Full-stack web consultant with 24 years of experience in design and development. Sitting at the intersection of brand thinking and engineering.",
   ignoreTitleTemplate: true,
 };
 ---
 
 <BaseLayout {metadata}>
   <Hero
-    title={`Starter Template for <br class="hidden md:block" /> <span class="bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Web Developers</span>`}
-    tagline="Astro v5 + Tailwind v4"
-    description={`${siteConfig.description}`}
+    title={`Full-Stack <br class="hidden md:block" /> <span class="bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Web Consultant</span>`}
+    tagline="Abhishek Prabhu · Panjim, Goa"
+    description="24 years at the intersection of brand thinking and engineering. I prioritize functionality, performance, and long-term maintainability."
     actions={[
       {
-        text: "Get Started",
-        href: "https://github.com/devgelo-labs/astro-starter-pro",
+        text: "Get in Touch",
+        href: "/contact",
         variant: "primary",
-        icon: "lucide:github",
+        icon: "lucide:mail",
       },
       {
-        text: "Our Services",
+        text: "My Services",
         href: "/services",
         variant: "secondary",
         icon: "lucide:arrow-right",
-        ariaLabel: "Learn more about our services",
+        ariaLabel: "Learn more about my services",
       },
     ]}
   />
   <Features
-    tagline="Features"
-    title="What's Included"
-    subtitle="A selection of tools and configurations to streamline your workflow."
+    tagline="Expertise"
+    title="What I Do"
+    subtitle="End-to-end web consulting across the full stack — from architecture to deployment."
     features={[
       {
-        title: "Optimized SEO",
+        title: "Backend Development",
         description:
-          "Base configuration for Meta tags, Open Graph, and Sitemap generation.",
-        icon: "lucide:scan-search",
+          "Laravel, PHP, TypeScript, Node.js, MySQL, PostgreSQL, Redis.",
+        icon: "lucide:server",
         iconClass: "bg-blue-500/10 text-blue-400",
       },
       {
-        title: "High Performance",
-        description: "Lightweight structure for fast load times.",
-        icon: "lucide:zap",
+        title: "Frontend Development",
+        description: "Vue.js, Inertia.js, Tailwind CSS, React.",
+        icon: "lucide:monitor",
         iconClass: "bg-purple-500/10 text-purple-400",
       },
       {
-        title: "Tailwind v4",
-        description:
-          "Integrated configuration with the latest version of Tailwind CSS.",
-        icon: "lucide:palette",
+        title: "DevOps & Infrastructure",
+        description: "Docker, Linux, Git, CI/CD, Cloudflare.",
+        icon: "lucide:cloud",
         iconClass: "bg-pink-500/10 text-pink-400",
       },
     ]}
@@ -65,70 +64,70 @@ const metadata = {
   <Content2
     items={[
       {
-        title: "Responsive Design",
+        title: "SaaS Architecture",
         description:
-          "Base configuration for Meta tags, Open Graph, and Sitemap generation.",
-        icon: "lucide:scan-search",
+          "Designing multi-tenant systems built to scale from day one.",
+        icon: "lucide:layers",
         iconClass: "bg-blue-500/10 text-blue-400",
       },
       {
-        title: "High Performance",
-        description: "Lightweight structure for fast load times.",
-        icon: "lucide:zap",
+        title: "Legacy Modernization",
+        description: "Safely migrating and refactoring ageing codebases.",
+        icon: "lucide:refresh-cw",
         iconClass: "bg-purple-500/10 text-purple-400",
       },
       {
-        title: "Tailwind v4",
-        description:
-          "Integrated configuration with the latest version of Tailwind CSS.",
-        icon: "lucide:palette",
+        title: "Performance Optimization",
+        description: "Profiling, caching, and tuning for real-world load.",
+        icon: "lucide:zap",
         iconClass: "bg-pink-500/10 text-pink-400",
       },
     ]}
     image={devImg}
-    imageAlt="Development"
+    imageAlt="Full-stack development"
   >
     <Fragment>
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Development
+        Engineering with intention
       </h3>
-      We provide a solid foundation to start your projects with best practices.
+      I began in design and carry those principles into software architecture and
+      code readability. The result is systems that are a pleasure to build on.
     </Fragment>
   </Content2>
   <Content2
     items={[
       {
-        title: "Open Source",
+        title: "Team Leadership",
         description:
-          "Developed under the MIT license, free for personal and commercial use.",
-        icon: "lucide:github",
+          "Leading 3–6 person engineering teams across education, e-commerce, ERP, and hospitality.",
+        icon: "lucide:users",
         iconClass: "bg-indigo-500/10 text-indigo-400",
       },
       {
-        title: "Community Driven",
+        title: "High Retention",
         description:
-          "Built with the feedback and contributions of the developer community.",
-        icon: "lucide:users",
+          "~80% client retention through clear communication and consistent delivery.",
+        icon: "lucide:handshake",
         iconClass: "bg-orange-500/10 text-orange-400",
       },
       {
-        title: "Regular Updates",
+        title: "Agile Delivery",
         description:
-          "Continuously improved with the latest technologies and best practices.",
-        icon: "lucide:refresh-cw",
+          "Iterative, transparent delivery with a focus on long-term maintainability.",
+        icon: "lucide:iteration-cw",
         iconClass: "bg-teal-500/10 text-teal-400",
       },
     ]}
     image={openSourceImg}
-    imageAlt="Community and Open Source"
+    imageAlt="Consulting and leadership"
     isReversed={true}
   >
     <Fragment>
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Open Source & Community
+        Consulting that sticks
       </h3>
-      Join the revolution of modern web development. This project is open for everyone
-      to use, learn from, and contribute to.
+      Freelance full-stack consultant since 2016. I work closely with clients to
+      understand their domain and deliver solutions that outlast the engagement.
     </Fragment>
   </Content2>
 </BaseLayout>

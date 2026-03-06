@@ -6,41 +6,41 @@ import Values from "../components/widgets/Values.astro";
 import aboutImage from "../assets/images/about-office.webp";
 
 const metadata = {
-  title: "About us",
+  title: "About",
   description:
-    "Learn more about our vision, values, and the team behind Astro Starter Pro.",
+    "Abhishek Prabhu — full-stack web consultant with 24 years of experience in design and development.",
 };
 
 const values = [
   {
-    title: "Innovation",
+    title: "Functionality first",
     description:
-      "Curabitur dignissim, felis non sollicitudin molestie, urna mauris pellentesque velit, ut eleifend.",
+      "Features that don't work reliably aren't features. I build for correctness before anything else.",
   },
   {
-    title: "Commitment",
+    title: "Performance matters",
     description:
-      "Aenean condimentum finibus mauris, a fermentum justo pan eget. Sed ultricies, neque quis.",
+      "Slow software costs real money. I profile, measure, and optimize rather than guess.",
   },
   {
-    title: "Quality",
+    title: "Long-term maintainability",
     description:
-      "Donec sed orci tincidunt, aliquam nisl a, condimentum nunc. Nulla varius ex nec ante feugiat.",
+      "Code is read far more than it is written. I write for the next developer, often my future self.",
   },
   {
-    title: "Transparency",
+    title: "Design thinking",
     description:
-      "Phasellus tristique, elit dapibus cursus facilisis, lorem augue fringilla nunc, vitae fermentum.",
+      "I started in design and apply those principles to architecture, APIs, and code readability.",
   },
   {
-    title: "Teamwork",
+    title: "Honest communication",
     description:
-      "In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et.",
+      "Clear, direct feedback at every stage. No surprises, no over-promising.",
   },
   {
-    title: "Excellence",
+    title: "Continuous improvement",
     description:
-      "Fusce at massa nec sapien auctor gravida in in tellus. Vivamus a tristique metus, et molestie.",
+      "Technology moves fast. I stay current so the systems I build don't become tomorrow's legacy problem.",
   },
 ];
 
@@ -53,24 +53,24 @@ const optimizedImage = await getImage({
 <BaseLayout {metadata}>
   <link slot="head" rel="preload" href={optimizedImage.src} as="image" />
   <Content2
-    title="Our Vision"
+    title="Hi, I'm Abhishek"
     description={[
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "I'm a full-stack web consultant based in Panjim, Goa with 24 years of experience in design and development. My work sits at the intersection of brand thinking and engineering — I care deeply about how things look, but I'll never trade correctness or performance for aesthetics.",
+      "I started in design, which gave me an eye for the user side of software. Over the years I've moved deeper into the stack — backend systems, databases, DevOps — while keeping that design sensibility in the way I structure code and architect systems. Since 2016 I've been freelancing full-time, leading small engineering teams across education, e-commerce, ERP, and hospitality.",
     ]}
     tagline="About"
     image={aboutImage}
-    imageAlt="Modern web development office"
+    imageAlt="Abhishek Prabhu — full-stack web consultant"
     actions={[
       {
-        text: "Contact Us",
+        text: "Get in Touch",
         href: "/contact",
         variant: "primary",
         icon: "lucide:mail",
       },
       {
-        text: "View Details",
-        href: "#",
+        text: "My Services",
+        href: "/services",
         variant: "secondary",
         icon: "lucide:arrow-right",
       },
@@ -79,8 +79,8 @@ const optimizedImage = await getImage({
   <Values
     items={values}
     columns={3}
-    tagline="Our Values"
-    title="What Defines Us"
-    subtitle="Principles that guide our daily work"
+    tagline="My Values"
+    title="What Drives My Work"
+    subtitle="Principles I apply to every project, large or small"
   />
 </BaseLayout>

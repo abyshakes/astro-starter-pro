@@ -9,68 +9,89 @@ import consultingImg from "../assets/images/services/consulting.webp";
 
 const services = [
   {
-    title: "Web Development",
-    description: "Static and dynamic sites built for the modern era.",
-    icon: "lucide:globe",
+    title: "Full-Stack Development",
+    description:
+      "End-to-end web application development with Laravel, Vue.js, TypeScript, and modern tooling.",
+    icon: "lucide:code-2",
   },
   {
-    title: "SEO Optimization",
-    description: "We ensure your content is found by those looking for it.",
-    icon: "lucide:search",
+    title: "SaaS Architecture",
+    description:
+      "Designing scalable, multi-tenant systems with the right trade-offs from the start.",
+    icon: "lucide:layers",
   },
   {
-    title: "IT Consulting",
-    description: "Technical advice to scale your projects to the next level.",
-    icon: "lucide:rocket",
+    title: "Legacy Modernization",
+    description:
+      "Safely migrating and refactoring ageing PHP/WordPress/Drupal codebases.",
+    icon: "lucide:refresh-cw",
+  },
+  {
+    title: "Performance Optimization",
+    description:
+      "Profiling, query optimization, caching strategies, and infrastructure tuning.",
+    icon: "lucide:zap",
+  },
+  {
+    title: "Technical Leadership",
+    description:
+      "Leading and mentoring small engineering teams through complex delivery.",
+    icon: "lucide:users",
+  },
+  {
+    title: "DevOps & Infrastructure",
+    description:
+      "Docker, Linux server management, CI/CD pipelines, and Cloudflare configuration.",
+    icon: "lucide:server",
   },
 ];
 const metadata = {
   title: "Services",
   description:
-    "Discover our web development, SEO optimization, and technology consulting services.",
+    "Full-stack development, SaaS architecture, legacy modernization, performance optimization, and technical leadership.",
 };
 ---
 
 <BaseLayout {metadata}>
   <Content
     tagline="Services"
-    title="Our Services"
+    title="What I Offer"
     description={[
-      "Comprehensive solutions designed to maximize the potential of your digital presence.",
+      "Hands-on consulting across the full stack — from greenfield architecture to rescuing troubled projects.",
     ]}
   />
   <ServiceList services={services} classes={{ container: "pt-0 md:pt-0" }} />
   <Content
-    tagline="Web Development"
-    title="Modern Web Development"
+    tagline="Full-Stack Development"
+    title="Building for the long run"
     description={[
-      "We specialize in building fast, secure, and scalable websites using the latest technologies. We transform your vision into an impactful digital experience.",
+      "I specialize in Laravel, Vue.js, TypeScript, and Node.js — choosing the right tool for the problem rather than defaulting to the fashionable one.",
     ]}
     classes={{ container: "pb-0 md:pb-0" }}
   />
   <Content2
     items={[
       {
-        title: "Responsive Design",
+        title: "Laravel & PHP",
         description:
-          "Your site will look perfect on any device, from mobiles to desktop screens.",
+          "Production-grade APIs, multi-tenant SaaS platforms, and complex business logic.",
       },
       {
-        title: "Optimized Performance",
+        title: "Vue.js & Inertia.js",
         description:
-          "Fast loading to improve user experience and SEO positioning.",
+          "Reactive frontends with a tight server-side integration and minimal overhead.",
       },
     ]}
     image={webDevImg}
-    imageAlt="Modern Web Development"
+    imageAlt="Full-stack web development"
     classes={{ container: "pt-0 md:pt-0" }}
   >
     <Fragment>
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Modern Web Development
+        Full-Stack Development
       </h3>
-      We specialize in building fast, secure, and scalable websites using the latest
-      technologies. We transform your vision into an impactful digital experience.
+      End-to-end ownership of features — from database schema to UI interaction.
+      I build systems that are a pleasure to work in and easy to hand over.
     </Fragment>
   </Content2>
 
@@ -78,51 +99,50 @@ const metadata = {
     isReversed={true}
     items={[
       {
-        title: "SEO Audit",
+        title: "Audit & assessment",
         description:
-          "We deeply analyze your website to identify technical and content improvement opportunities.",
+          "Deep analysis of existing codebases to surface risks, bottlenecks, and quick wins.",
       },
       {
-        title: "Content Strategy",
+        title: "Incremental migration",
         description:
-          "We create relevant content plans that attract and retain your target audience.",
+          "Modernizing legacy systems without stopping the business — step by step.",
       },
     ]}
     image={seoImg}
-    imageAlt="SEO Strategies"
+    imageAlt="Legacy modernization"
   >
     <Fragment>
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        SEO Optimization
+        Legacy Modernization
       </h3>
-      We help your business get found by the right people. Our organic positioning
-      strategies are designed to improve your organic visibility.
+      Old codebases don't have to stay that way. I've helped teams migrate from WordPress,
+      Drupal, and ageing PHP to maintainable modern stacks without losing momentum.
     </Fragment>
   </Content2>
 
   <Content2
     items={[
       {
-        title: "Digital Transformation",
+        title: "Infrastructure as code",
         description:
-          "We guide you in adopting new technologies to optimize your business processes.",
+          "Docker-based environments, repeatable deployments, and zero-surprise production setups.",
       },
       {
-        title: "Software Architecture",
+        title: "CI/CD & observability",
         description:
-          "We design robust and scalable systems prepared for future growth.",
+          "Automated pipelines, health checks, and alerting so problems surface before clients do.",
       },
     ]}
     image={consultingImg}
-    imageAlt="Technology Consulting"
+    imageAlt="DevOps and infrastructure"
   >
     <Fragment>
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Technology Consulting
+        DevOps & Infrastructure
       </h3>
-      We accompany you in critical decision-making. We evaluate your current infrastructure
-      and design personalized roadmaps to take your company to the next technological
-      level.
+      From Linux server hardening to Cloudflare configuration and CI/CD pipelines —
+      I handle the ops layer so your team can focus on product.
     </Fragment>
   </Content2>
 </BaseLayout>
