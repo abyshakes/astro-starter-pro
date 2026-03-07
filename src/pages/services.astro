@@ -9,46 +9,29 @@ import consultingImg from "../assets/images/services/consulting.webp";
 
 const services = [
   {
-    title: "Full-Stack Development",
+    title: "Website Development",
     description:
-      "End-to-end web application development with Laravel, Vue.js, TypeScript, and modern tooling.",
-    icon: "lucide:code-2",
+      "Custom websites and web applications built to perform — from portfolio sites and blogs to membership platforms and e-commerce stores.",
+    icon: "lucide:monitor",
+    href: "/website-development",
   },
   {
-    title: "SaaS Architecture",
+    title: "Automation & AI Workflows",
     description:
-      "Designing scalable, multi-tenant systems with the right trade-offs from the start.",
-    icon: "lucide:layers",
-  },
-  {
-    title: "Legacy Modernization",
-    description:
-      "Safely migrating and refactoring ageing PHP/WordPress/Drupal codebases.",
-    icon: "lucide:refresh-cw",
-  },
-  {
-    title: "Performance Optimization",
-    description:
-      "Profiling, query optimization, caching strategies, and infrastructure tuning.",
-    icon: "lucide:zap",
-  },
-  {
-    title: "Technical Leadership",
-    description:
-      "Leading and mentoring small engineering teams through complex delivery.",
-    icon: "lucide:users",
+      "Business processes streamlined or fully automated — internal tools, agentic AI workflows, and AI-powered chat on WhatsApp.",
+    icon: "lucide:bot",
   },
   {
     title: "DevOps & Infrastructure",
     description:
-      "Docker, Linux server management, CI/CD pipelines, and Cloudflare configuration.",
+      "Reliable hosting, deployment pipelines, Docker, Linux servers, Cloudflare, and CI/CD — infrastructure that keeps your platform fast, secure, and always on.",
     icon: "lucide:server",
   },
 ];
 const metadata = {
   title: "Services",
   description:
-    "Full-stack development, SaaS architecture, legacy modernization, performance optimization, and technical leadership.",
+    "Website development, business automation, AI workflows, and DevOps infrastructure — built with 24 years of experience.",
 };
 ---
 
@@ -57,41 +40,46 @@ const metadata = {
     tagline="Services"
     title="What I Offer"
     description={[
-      "Hands-on consulting across the full stack — from greenfield architecture to rescuing troubled projects.",
+      "Three focused areas of work — websites that last, automation that saves time, and infrastructure that doesn't let you down.",
     ]}
   />
   <ServiceList services={services} classes={{ container: "pt-0 md:pt-0" }} />
-  <Content
-    tagline="Full-Stack Development"
-    title="Building for the long run"
-    description={[
-      "I specialize in Laravel, Vue.js, TypeScript, and Node.js — choosing the right tool for the problem rather than defaulting to the fashionable one.",
-    ]}
-    classes={{ container: "pb-0 md:pb-0" }}
-  />
   <Content2
     items={[
       {
-        title: "Laravel & PHP",
+        title: "Brochure & Portfolio Sites",
         description:
-          "Production-grade APIs, multi-tenant SaaS platforms, and complex business logic.",
+          "Clean, fast, and professionally designed sites that represent your brand and convert visitors.",
       },
       {
-        title: "Vue.js & Inertia.js",
+        title: "E-commerce & Membership",
         description:
-          "Reactive frontends with a tight server-side integration and minimal overhead.",
+          "Online stores, subscription platforms, and gated content — built to handle real transaction volume.",
+      },
+      {
+        title: "Custom Web Applications",
+        description:
+          "Bespoke platforms and internal tools when off-the-shelf software doesn't cut it.",
       },
     ]}
     image={webDevImg}
-    imageAlt="Full-stack web development"
-    classes={{ container: "pt-0 md:pt-0" }}
+    imageAlt="Website development"
+    actions={[
+      {
+        text: "View Plans & Pricing",
+        href: "/website-development",
+        variant: "primary",
+        icon: "lucide:arrow-right",
+      },
+    ]}
   >
     <Fragment>
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Full-Stack Development
+        Website Development
       </h3>
-      End-to-end ownership of features — from database schema to UI interaction.
-      I build systems that are a pleasure to work in and easy to hand over.
+      Every site I build is custom — no bloated templates, no unnecessary dependencies.
+      From a one-page portfolio to a full e-commerce platform, the goal is always the same:
+      fast, maintainable, and built to grow with you.
     </Fragment>
   </Content2>
 
@@ -99,39 +87,50 @@ const metadata = {
     isReversed={true}
     items={[
       {
-        title: "Audit & assessment",
+        title: "Business Process Automation",
         description:
-          "Deep analysis of existing codebases to surface risks, bottlenecks, and quick wins.",
+          "Eliminate repetitive manual work — approvals, notifications, data entry, reporting — with reliable automated workflows.",
       },
       {
-        title: "Incremental migration",
+        title: "Agentic AI Workflows",
         description:
-          "Modernizing legacy systems without stopping the business — step by step.",
+          "AI agents that handle multi-step tasks autonomously, from lead qualification to content generation and data processing.",
+      },
+      {
+        title: "AI Chat on WhatsApp",
+        description:
+          "Intelligent, always-on WhatsApp bots that answer questions, qualify leads, and handle customer interactions around the clock.",
       },
     ]}
     image={seoImg}
-    imageAlt="Legacy modernization"
+    imageAlt="Automation and AI workflows"
   >
     <Fragment>
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Legacy Modernization
+        Automation & AI Workflows
       </h3>
-      Old codebases don't have to stay that way. I've helped teams migrate from WordPress,
-      Drupal, and ageing PHP to maintainable modern stacks without losing momentum.
+      If your team is doing the same thing more than twice, it can probably be automated.
+      I identify the friction points in your business and build systems — from simple scripts
+      to full agentic AI pipelines — that remove them.
     </Fragment>
   </Content2>
 
   <Content2
     items={[
       {
-        title: "Infrastructure as code",
+        title: "Infrastructure as Code",
         description:
           "Docker-based environments, repeatable deployments, and zero-surprise production setups.",
       },
       {
-        title: "CI/CD & observability",
+        title: "CI/CD & Observability",
         description:
-          "Automated pipelines, health checks, and alerting so problems surface before clients do.",
+          "Automated pipelines, health checks, and alerting so problems surface before your clients do.",
+      },
+      {
+        title: "Security & Performance",
+        description:
+          "Linux server hardening, Cloudflare configuration, caching strategies, and load optimisation.",
       },
     ]}
     image={consultingImg}
@@ -141,8 +140,9 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
         DevOps & Infrastructure
       </h3>
-      From Linux server hardening to Cloudflare configuration and CI/CD pipelines —
-      I handle the ops layer so your team can focus on product.
+      Good software deserves a solid foundation. I handle the ops layer — hosting, deployments,
+      security, and monitoring — so your platform stays fast, safe, and available without
+      you having to think about it.
     </Fragment>
   </Content2>
 </BaseLayout>

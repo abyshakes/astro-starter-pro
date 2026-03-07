@@ -1,0 +1,277 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/widgets/Hero.astro";
+import Features from "../components/widgets/Features.astro";
+import Content2 from "../components/widgets/Content2.astro";
+import WidgetWrapper from "../components/widgets/WidgetWrapper.astro";
+
+const metadata = {
+  title: "Website Development",
+  description:
+    "Custom websites built to convert — from simple information sites to full e-commerce platforms. Discover the right plan for your business.",
+};
+
+const plans = [
+  {
+    name: "Information Site",
+    price: "₹25,000",
+    priceTo: "₹35,000",
+    description:
+      "A clean, professional web presence for businesses that need to be found and trusted online.",
+    features: [
+      "Up to 5 pages",
+      "Mobile-responsive design",
+      "Contact form",
+      "Basic on-page SEO",
+      "Google Analytics setup",
+      "Fast page load times",
+      "1 month post-launch support",
+    ],
+    highlighted: false,
+    cta: "Get a Quote",
+    ctaHref: "/contact",
+  },
+  {
+    name: "Portfolio Site",
+    price: "₹40,000",
+    priceTo: "₹60,000",
+    description:
+      "For architects, photographers, designers, and creative professionals who need their work to speak for itself.",
+    features: [
+      "Up to 12 pages",
+      "Custom visual design",
+      "Project gallery with filtering",
+      "CMS for easy content updates",
+      "Advanced on-page SEO",
+      "Enquiry & contact forms",
+      "Social media integration",
+      "3 months post-launch support",
+    ],
+    highlighted: true,
+    badge: "Most Popular",
+    cta: "Get a Quote",
+    ctaHref: "/contact",
+  },
+  {
+    name: "E-commerce",
+    price: "₹60,000",
+    priceTo: "₹3,00,000",
+    description:
+      "A full online store built for growth — from boutique shops to high-volume catalogues.",
+    features: [
+      "Unlimited products & categories",
+      "Payment gateway integration",
+      "Inventory & order management",
+      "Customer accounts & wishlist",
+      "Discount codes & promotions",
+      "Advanced SEO & performance",
+      "Admin dashboard",
+      "6 months post-launch support",
+    ],
+    highlighted: false,
+    cta: "Get a Quote",
+    ctaHref: "/contact",
+  },
+];
+---
+
+<BaseLayout {metadata}>
+  <Hero
+    tagline="Website Development"
+    title={`Websites built <br class="hidden md:block" /> <span class="bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">to convert.</span>`}
+    description="Not just a good-looking site — a system designed around your goals, your audience, and long-term growth."
+    actions={[
+      {
+        text: "Get in Touch",
+        href: "/contact",
+        variant: "primary",
+        icon: "lucide:mail",
+      },
+      {
+        text: "See Pricing",
+        href: "#pricing",
+        variant: "secondary",
+        icon: "lucide:arrow-down",
+      },
+    ]}
+  />
+
+  <!-- Discovery Process -->
+  <Features
+    tagline="How it works"
+    title="From first call to live site"
+    subtitle="A clear, collaborative process that keeps you informed at every step and removes guesswork from the project."
+    features={[
+      {
+        title: "1. Discovery",
+        description:
+          "We start with a conversation — your goals, your audience, what success looks like, and what's not working with your current site. No briefs, no forms. Just a real discussion.",
+        icon: "lucide:search",
+        iconClass: "bg-blue-500/10 text-blue-400",
+      },
+      {
+        title: "2. Structure & Content",
+        description:
+          "Before any design, we map the sitemap and content hierarchy — what pages exist, what each page needs to say, and how a visitor flows from landing to enquiry.",
+        icon: "lucide:layout",
+        iconClass: "bg-purple-500/10 text-purple-400",
+      },
+      {
+        title: "3. Design & Build",
+        description:
+          "I design and build in tandem, sharing progress regularly. You'll see the site take shape and can give feedback before anything is set in stone.",
+        icon: "lucide:code-2",
+        iconClass: "bg-pink-500/10 text-pink-400",
+      },
+      {
+        title: "4. Review & Refine",
+        description:
+          "A dedicated review phase where we go through the site together, test on all devices, fix any issues, and make sure every detail is right before launch.",
+        icon: "lucide:check-circle",
+        iconClass: "bg-emerald-500/10 text-emerald-400",
+      },
+      {
+        title: "5. Launch",
+        description:
+          "I handle the deployment, domain, DNS, and any final configuration. Launch day is low-stress — everything is prepared and tested in advance.",
+        icon: "lucide:rocket",
+        iconClass: "bg-amber-500/10 text-amber-400",
+      },
+      {
+        title: "6. Support",
+        description:
+          "Every project includes a support period post-launch. You're never left alone once the site goes live — I'm available for fixes, tweaks, and guidance.",
+        icon: "lucide:life-buoy",
+        iconClass: "bg-teal-500/10 text-teal-400",
+      },
+    ]}
+  />
+
+  <!-- What makes a converting site -->
+  <Content2
+    items={[
+      {
+        title: "Clarity over cleverness",
+        description:
+          "Visitors decide in seconds. I make sure the first thing they see answers: what you do, who it's for, and what to do next.",
+        icon: "lucide:target",
+        iconClass: "bg-blue-500/10 text-blue-400",
+      },
+      {
+        title: "Speed is a feature",
+        description:
+          "Every site I build is optimised for performance. Slow sites lose visitors — fast sites build trust before a word is read.",
+        icon: "lucide:zap",
+        iconClass: "bg-purple-500/10 text-purple-400",
+      },
+      {
+        title: "Built to be found",
+        description:
+          "SEO is built in from the start — proper structure, metadata, and performance so search engines can index and rank your site correctly.",
+        icon: "lucide:search",
+        iconClass: "bg-pink-500/10 text-pink-400",
+      },
+    ]}
+  >
+    <Fragment>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        What makes a site convert?
+      </h3>
+      Most sites fail not because they look bad, but because they're unclear, slow, or
+      impossible to find. I focus on the fundamentals that turn visitors into enquiries.
+    </Fragment>
+  </Content2>
+
+  <!-- Pricing -->
+  <WidgetWrapper id="pricing">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <p class="text-sm font-semibold uppercase tracking-widest text-primary mb-3">Pricing</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
+        Choose the right plan
+      </h2>
+      <p class="text-lg text-muted-foreground">
+        Transparent price ranges based on scope. Every project is quoted individually — these are honest starting points.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      {plans.map((plan) => (
+        <div
+          class:list={[
+            "relative flex flex-col rounded-2xl border p-8 transition-all",
+            plan.highlighted
+              ? "border-primary bg-primary/5 shadow-xl shadow-primary/10 scale-[1.02]"
+              : "border-border bg-card shadow-sm",
+          ]}
+        >
+          {plan.badge && (
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+              <span class="inline-flex items-center px-4 py-1 rounded-full text-xs font-bold bg-primary text-primary-foreground shadow">
+                {plan.badge}
+              </span>
+            </div>
+          )}
+
+          <div class="mb-6">
+            <h3 class="text-xl font-bold text-foreground mb-2">{plan.name}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{plan.description}</p>
+          </div>
+
+          <div class="mb-8">
+            <div class="flex items-baseline gap-1 flex-wrap">
+              <span class="text-3xl font-extrabold text-foreground">{plan.price}</span>
+              <span class="text-muted-foreground text-sm">–</span>
+              <span class="text-3xl font-extrabold text-foreground">{plan.priceTo}</span>
+            </div>
+            <p class="text-xs text-muted-foreground mt-1">One-time project fee · INR</p>
+          </div>
+
+          <ul class="space-y-3 mb-8 flex-1">
+            {plan.features.map((feature) => (
+              <li class="flex items-start gap-3 text-sm text-muted-foreground">
+                <svg class:list={["w-5 h-5 shrink-0 mt-0.5", plan.highlighted ? "text-primary" : "text-emerald-400"]} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={plan.ctaHref}
+            class:list={[
+              "block w-full text-center rounded-xl px-6 py-3 text-sm font-bold transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary",
+              plan.highlighted
+                ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md"
+                : "bg-card border border-border text-foreground hover:bg-muted",
+            ]}
+          >
+            {plan.cta}
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-center text-sm text-muted-foreground mt-10">
+      Not sure which plan fits? <a href="/contact" class="text-primary underline underline-offset-4 hover:text-primary/80">Let's talk it through.</a>
+    </p>
+  </WidgetWrapper>
+
+  <!-- CTA -->
+  <WidgetWrapper>
+    <div class="max-w-2xl mx-auto text-center py-8">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
+        Ready to start?
+      </h2>
+      <p class="text-lg text-muted-foreground mb-8">
+        Tell me about your project and I'll come back with honest advice, a clear scope, and a quote.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-lg font-bold text-primary-foreground shadow-lg hover:bg-primary/90 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+      >
+        Get in Touch
+      </a>
+    </div>
+  </WidgetWrapper>
+</BaseLayout>
