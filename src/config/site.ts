@@ -1,5 +1,3 @@
-import ogImage from "../assets/og-image.png";
-
 export const siteConfig = {
   name: "abyshakes",
   description:
@@ -9,7 +7,7 @@ export const siteConfig = {
   locale: "en_US",
   author: "Abhishek Prabhu",
   twitter: "@abyshakes",
-  ogImage: ogImage,
+  ogImage: "/og-image.png",
   socialLinks: {
     twitter: "https://x.com/abyshakes",
     github: "https://github.com/abyshakes",
