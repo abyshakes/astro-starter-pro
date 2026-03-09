@@ -3,9 +3,11 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 import remarkReadingTime from "remark-reading-time";
+import vercel from "@astrojs/vercel";
 
 export default defineConfig({
   site: "https://www.abyshakes.com",
+  adapter: vercel(),
   integrations: [sitemap(), icon()],
   markdown: {
     remarkPlugins: [

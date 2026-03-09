@@ -20,6 +20,7 @@
     "@astrojs/check": "^0.9.6",
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.6.1",
+    "@astrojs/vercel": "^9.0.4",
     "@iconify-json/lucide": "^1.2.86",
     "@iconify-json/tabler": "^1.2.26",
     "@tailwindcss/vite": "^4.1.18",
@@ -28,6 +29,7 @@
     "astro": "^5.16.8",
     "astro-icon": "^1.1.5",
     "remark-reading-time": "^2.0.2",
+    "resend": "^6.9.3",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
   },
