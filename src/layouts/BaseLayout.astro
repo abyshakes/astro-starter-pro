@@ -18,6 +18,7 @@ import Schema from "../components/seo/Schema.astro";
 import Navbar from "../components/layout/Navbar.astro";
 import Footer from "../components/layout/Footer.astro";
 import CookieBanner from "../components/layout/CookieBanner.astro";
+import FacebookPixel from "../components/layout/FacebookPixel.astro";
 import "../styles/global.css";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
@@ -45,6 +46,7 @@ const finalIgnoreTitleTemplate = metadata?.ignoreTitleTemplate || false;
     />
     <Schema type="WebSite" data={{}} />
     <slot name="head" />
+    <FacebookPixel />
     <script is:inline>
       const getTheme = () => {
         if (
