@@ -17,6 +17,7 @@ import Seo from "../components/seo/Seo.astro";
 import Schema from "../components/seo/Schema.astro";
 import Navbar from "../components/layout/Navbar.astro";
 import Footer from "../components/layout/Footer.astro";
+import PostHog from "../components/layout/posthog.astro";
 import "../styles/global.css";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
@@ -43,6 +44,7 @@ const finalIgnoreTitleTemplate = metadata?.ignoreTitleTemplate || false;
       ignoreTitleTemplate={finalIgnoreTitleTemplate}
     />
     <Schema type="WebSite" data={{}} />
+    <PostHog />
     <slot name="head" />
     <script is:inline>
       const getTheme = () => {
